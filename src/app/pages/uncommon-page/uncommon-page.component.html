@@ -51,9 +51,13 @@
   }
 </ul>
 </app-card>
-
 <app-card title="Async Pipe">
   <p>{{promiseValue | async }}</p>
+  @if (promiseValue | async; as value) {
+    <p class="text-2xl text-primary">{{value}}</p>
+  } @else {
+    <p class="font-bold text-secondary">Esperando...</p>
+  }
 </app-card>
 
 </div>
